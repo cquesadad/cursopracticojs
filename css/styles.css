@@ -1,3 +1,8 @@
 body {
     font-family: "Helvetica", sans-serif;
 }
+
+button.btn.btn-primary{
+    background-color:--bs-indigo;
+    color: white;
+}

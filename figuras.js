@@ -23,7 +23,7 @@ console.groupEnd();
 console.group("Triángulo");
 
 function perimetroTriangulo(lado1, lado2, base){
-    return lado1 + lado2 + base; 
+    return parseInt(lado1) + parseInt(lado2) + parseInt(base); 
 }
 
 function areaTriangulo(base, altura){
@@ -89,4 +89,48 @@ function areaCirculo(radio){
 //console.log("El área del círculo es: " + areaCirculo + "cm2");
 
 console.groupEnd();
+
+
+//Aquí interactuamos con el HTML
+
+//tomar el valor del input del cuadrado y calcularlo usando la función anterior ya creada
+
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const perimetro = perimetroCuadrado(value)
+    document.getElementById("resultadoCuadrado").innerHTML = "El perímetro es: " + perimetro + "cm";
+}
+
+function calcularAreaCuadrado(){
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const area = areaCuadrado(value);
+    document.getElementById("resultadoCuadrado").innerHTML = "El área es: " + area + "cm";
+}
+
+
+//tomar el valores del input del triangulo y resolver
+
+function calcularPerimetroTriangulo(){
+    const input1 = document.getElementById("InputTrianguloLado1");
+    const value1 = input1.value;
+
+    const input2 = document.getElementById("InputTrianguloLado2");
+    const value2 = input2.value;
+
+    const inputBase = document.getElementById("InputTrianguloBase");
+    const valueBase = inputBase.value;
+
+    const perimetro = perimetroTriangulo(value1, value2, valueBase)
+
+    //validar que se ha entrado los datos
+    if (!isNaN(perimetro)) {
+        document.getElementById("resultadoTriangulo").innerHTML = "El perímetro es: " + perimetro + "cm";
+    } else {
+        document.getElementById("resultadoTriangulo").innerHTML = "Introduce todos los valores";
+    }
+    
+    console.log("El perímetro del triá¡ngulo es: " + perimetro + "cm");
+}
 
