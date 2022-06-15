@@ -19,7 +19,7 @@ function areaCuadrado(lado) {
 
 console.groupEnd();
 
-// Código del triángulo
+// TRIANGULO //
 console.group("Triángulo");
 
 function perimetroTriangulo(lado1, lado2, base){
@@ -30,6 +30,9 @@ function areaTriangulo(base, altura){
     return (base * altura) / 2;
 }
 
+function alturaIsosceles(lados, base){
+    return Math.sqrt((Math.pow(lados, 2) - (Math.pow(base, 2) / 4)));
+}
 //const ladoTriangulo1 = 6;
 //const ladoTriangulo2 = 6;
 //const baseTriangulo = 4;
@@ -48,7 +51,7 @@ function areaTriangulo(base, altura){
 
 console.groupEnd();
 
-// Código del círculo
+// CIRCULO //
 console.group("Círculo");
 
 
@@ -99,14 +102,14 @@ function calcularPerimetroCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
     const perimetro = perimetroCuadrado(value)
-    document.getElementById("resultadoCuadrado").innerHTML = "El perímetro es: " + perimetro + "cm";
+    document.getElementById("resultadoCuadrado").innerHTML = "El perímetro es: " + perimetro + " cm";
 }
 
 function calcularAreaCuadrado(){
     const input = document.getElementById("InputCuadrado");
     const value = input.value;
     const area = areaCuadrado(value);
-    document.getElementById("resultadoCuadrado").innerHTML = "El área es: " + area + "cm";
+    document.getElementById("resultadoCuadrado").innerHTML = "El área es: " + area + " cm2";
 }
 
 
@@ -126,11 +129,41 @@ function calcularPerimetroTriangulo(){
 
     //validar que se ha entrado los datos
     if (!isNaN(perimetro)) {
-        document.getElementById("resultadoTriangulo").innerHTML = "El perímetro es: " + perimetro + "cm";
+        document.getElementById("resultadoTriangulo").innerHTML = "El perímetro es: " + perimetro + " cm";
     } else {
         document.getElementById("resultadoTriangulo").innerHTML = "Introduce todos los valores";
     }
     
     console.log("El perímetro del triá¡ngulo es: " + perimetro + "cm");
 }
+//función para calcular la altura h=sqrt(pow(a, 2)-pow(b/2, 2))
+function alturaIsosceles(lados, base){
+    return Math.sqrt((Math.pow(lados, 2) - (Math.pow(base, 2) / 4)));
+}
 
+//función para tomar los lados del formulario e imprimir el resultado
+function calcularAlturaTriangulo() {
+    const input1 = document.getElementById("InputAlturaTrianguloLado1");
+    const value1 = input1.value;
+
+    const input2 = document.getElementById("InputAlturaTrianguloLado2");
+    const value2 = input2.value;
+
+    const inputBase = document.getElementById("InputAlturaTrianguloBase");
+    const valueBase = inputBase.value;
+
+    if (value1 === value2){
+        
+        const altura = alturaIsosceles(value1, valueBase);
+
+        if (altura != 0) {
+            document.getElementById("resultadoAlturaTriangulo").innerHTML = "El triángulo es isosceles y su altura es : " + altura.toFixed(2); + " cm";
+        } else {
+            document.getElementById("resultadoAlturaTriangulo").innerHTML = "Por favor, introduce todos los valores";
+        }
+        
+    } else {
+        document.getElementById("resultadoAlturaTriangulo").innerHTML = "El triángulo no es isosceles, prueba con otros datos";
+    }
+
+}

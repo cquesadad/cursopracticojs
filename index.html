@@ -23,7 +23,7 @@
             <h1></h1>
             <p>Este es un proyecto de pruebas personal para calcular el área y perímetro en figuras geométricas básicas</p>
 
-            <div class="h-70 p-5 mb-2 bg-light border rounded-3">
+            <div class="h-70 p-5 mb-4 bg-light border rounded-3">
                 <h2>Calcular área y perímetro de un cuadrado</h2>
                 <form>
                     <div class="mb-3">
@@ -40,8 +40,18 @@
                 <p id="resultadoCuadrado"></p>
             </div>
             
-            <div class="h-70 p-5 bg-light border rounded-3">
-                <h2>Calcular área y perímetro de un triángulo</h2>
+            
+
+            
+
+            
+
+        </div>
+     </div>
+     <div class="row">
+        <div class="col">
+            <div class="h-70 p-5 mb-2 bg-light border rounded-3">
+                <h2>Calcular perímetro de un triángulo</h2>
                 <form>
                     <div class="mb-3">
 
@@ -62,9 +72,29 @@
                 <p id="resultadoTriangulo"></p>
             </div>
 
-            <footer class="pt-3 mt-4 text-muted border-top">
-                © 2022
-            </footer>
+        </div>
+        <div class="col">
+            <div class="h-70 p-5 bg-light border rounded-3">
+                <h2>Calcular altura de un triángulo</h2>
+                <form>
+                    <div class="mb-3">
+
+                    <label for="InputAlturaTrianguloLado1" class="form-label">Escribe cuanto mide el lado 1 del triángulo </label>
+                    <input id="InputAlturaTrianguloLado1" class="form-control mb-2" type="number" />
+
+                    <label for="InputAlturaTrianguloLado2" class="form-label">Escribe cuanto mide el lado 2 del triángulo </label>
+                    <input id="InputAlturaTrianguloLado2" class="form-control mb-2" type="number" />
+
+                    <label for="InputAlturaTrianguloBase" class="form-label">Escribe cuanto mide la base del triángulo </label>
+                    <input id="InputAlturaTrianguloBase" class="form-control mb-2" type="number" />
+
+                    <button type="button" class="btn btn-primary btn-outline-secondary" onclick="calcularAlturaTriangulo()">Calcular altura</button>
+                   
+                  
+                    </div>
+                </form>
+                <p id="resultadoAlturaTriangulo"></p>
+            </div>
 
         </div>
      </div>
@@ -72,6 +102,11 @@
 
      
 </section>
+
+
+<footer class="container pt-3 mt-4 mb-4 text-muted border-top">
+    © 2022
+</footer>
 
 
 </main>
