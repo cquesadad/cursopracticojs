@@ -1,0 +1,8 @@
+{
+    "name": "cursopracticojs",
+    "version": "1.0.1",
+    "description": "",
+    "devDependencies": {
+      "@twbs/bootstrap": "^5.2"
+    }
+  }
