@@ -136,12 +136,7 @@ function calcularPerimetroTriangulo(){
     
     console.log("El perímetro del triá¡ngulo es: " + perimetro + "cm");
 }
-//función para calcular la altura h=sqrt(pow(a, 2)-pow(b/2, 2))
-function alturaIsosceles(lados, base){
-    return Math.sqrt((Math.pow(lados, 2) - (Math.pow(base, 2) / 4)));
-}
 
-//función para tomar los lados del formulario e imprimir el resultado
 function calcularAlturaTriangulo() {
     const input1 = document.getElementById("InputAlturaTrianguloLado1");
     const value1 = input1.value;
