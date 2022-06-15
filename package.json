@@ -3,6 +3,6 @@
     "version": "1.0.1",
     "description": "",
     "devDependencies": {
-      "@twbs/bootstrap": "^5.2.0-beta1"
+      "@twbs/bootstrap": "^5.2.0"
     }
   }
