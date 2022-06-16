@@ -58,12 +58,15 @@ function buttonPriceDiscount(){
         const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
         
         const ResultPrice = document.getElementById("ResultPrice");
-        ResultPrice.innerText = "El precio con descuento es " + precioConDescuento + " €";  
-    }
+        ResultPrice.innerText = "El precio con descuento es " + precioConDescuento + " €";
+        document.getElementById("BasePrice").innerText = priceValue + " €"; 
+        document.getElementById("FinalPrice").innerText = precioConDescuento + " €";
+        document.getElementById("DiscountPercent").innerText = descuento + " %";
 
-    
-    
-    
+        const element = document.getElementById("spamBadge");
+        element.classList.add('badge', 'text-bg-danger');
+        
+    }
 }
 
 

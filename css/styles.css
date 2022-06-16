@@ -10,3 +10,17 @@ button.btn.btn-primary{
 p#ResultPrice, p#resultadoAlturaTriangulo, p#resultadoTriangulo, p#resultadoCuadrado{
     font-weight: 700;
 }
+
+#FinalPrice{
+    font-weight:700;
+}
+
+#BasePrice{
+    text-decoration: line-through;
+    color: grey;
+}
+
+#spamBadge{
+    position: absolute;
+    margin-left: 10px;
+}
