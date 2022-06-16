@@ -18,16 +18,56 @@ function calcularPrecioConDescuento(precio, descuento) {
     precioConDescuento,
 });*/
 
+const coupons = [
+    {
+        name: "verano20",
+        discount: 15,
+    },
+    {
+        name: "electronica10",
+        discount: 10,
+    },
+    {
+        name: "cyberweekend",
+        discount: 10,
+    },
+];
+
 function buttonPriceDiscount(){
     const inputPrice = document.getElementById("InputPrice");
     const priceValue = inputPrice.value;
-    const inputDiscount = document.getElementById("InputDiscount");
-    const discountValue = inputDiscount.value;
 
-    const precioConDescuento = calcularPrecioConDescuento(priceValue, discountValue);
+    const inputCoupon = document.getElementById("InputCoupon");
+    const couponValue = inputCoupon.value;
+    //const inputDiscount = document.getElementById("InputDiscount");
+    //const discountValue = inputDiscount.value;
+    
+    const isCouponValueValid = function (coupon){
+        return coupon.name === couponValue
+    }
 
-    const ResultPrice = document.getElementById("ResultPrice");
-    ResultPrice.innerText = "El precio con descuento es " + precioConDescuento + " €";
+    const userCoupon = coupons.find(isCouponValueValid);
+
+    //let descuento;
+
+    if (!userCoupon) {
+        document.getElementById("errorInputCoupon").innerText = "El cupón " + couponValue + " no es válido";
+        ResultPrice.innerText = "Escribe un cupón de descuento válido";
+    } else {
+        const descuento = userCoupon.discount;
+        const precioConDescuento = calcularPrecioConDescuento(priceValue, descuento);
+        
+        const ResultPrice = document.getElementById("ResultPrice");
+        ResultPrice.innerText = "El precio con descuento es " + precioConDescuento + " €";  
+    }
+
+    
+    
     
 }
+
+
+
+
+
 
