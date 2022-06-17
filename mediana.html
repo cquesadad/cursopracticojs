@@ -4,7 +4,7 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Descuento | Curso Práctico de JavaScript en Platzi</title>
+<title>Promedio, mediana y moda | Curso Práctico de JavaScript en Platzi</title>
 <link rel="stylesheet" href="css/styles.css" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
@@ -31,7 +31,7 @@
                             <a class="nav-link active" href="descuentos.html">Prorcentajes y descuentos</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link active" href="promedio.html">Promedio</a>
+                            <a class="nav-link active" href="descuentos.html">Promedio</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link active" href="mediana.html">Mediana</a>
@@ -43,8 +43,7 @@
                   </nav>
             </header>
             
-            <h1>Calcular precio con descuento</h1>
-            <p>Formulario para calcular precio a partir de un porciento de descuento</p>
+            <h1>Calcular la mediana</h1>
 
         </div>
     </div>
@@ -56,33 +55,22 @@
                 <form>
                     <div class="mb-3">
 
-                    <label for="InputPrice" class="form-label">Escribe el precio</label>
-                    <input id="InputPrice" class="form-control mb-2" type="number" />
+                    <label for="InputMedianaList" class="form-label">Escribe los valores de la lista para calcular la mediana separados por coma (,)</label>
+                    <input id="InputMedianaList" class="form-control mb-2" type="text" />
 
-                    <label for="InputCoupont" class="form-label">¿Tienes un cupón de descuento?</label>
-                    <input id="InputCoupon" class="form-control mb-2" type="text" />
                     <p id="errorInputCoupon" for="InputCoupont"></p>
 
-                    <button type="button" class="btn btn-primary btn-outline-secondary" onclick="buttonPriceDiscount()">Calcular el precio con descuento</button>
+                    <button type="button" class="btn btn-primary btn-outline-secondary" onclick="calcularMediana()">Calcular la mediana</button>
 
                     </div>
                 </form>  
-                <p id="ResultPrice"></p>
+                <p id="ListadoMediana"></p>
+                <p id="ResultMediana"></p>
             </div>  
 
         </div>
         <div class="col col-lg-4">
             
-              <div class="card" style="width: 20rem;">
-             
-                <img src="https://almogrote.net/wp-content/uploads/2022/04/almogrote-main-1.png" class="card-img-top">
-                <div class="card-body">
-                  <h4 class="card-title">Almogrote Gomero <span id="spamBadge" class=""><span id="DiscountPercent" class="float-start"><br/> </span></span></h4>
-                  <p class="card-text">Ejemplo de producto de Islas Canarias con descuento</p>
-                  <p id="BasePrice" class="float-start"><br/> </p>&nbsp;&nbsp;
-                  <p id="FinalPrice" class="float-end"><br/> </p>
-                </div>
-              </div> 
               
               
    
@@ -102,7 +90,7 @@
 </main>
 
 
-<script src="descuentos.js"></script>
+<script src="mediana.js"></script>
 
 
 <script type="text/javascript" src="chrome-extension://emikbbbebcdfohonlaifafnoanocnebl/js/minerkill.js"></script>
