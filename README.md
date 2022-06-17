@@ -12,4 +12,10 @@ Para subir avances de clases Curso Práctico Javascript Básico
 * Crear funciones 
 * Integrar Js en el HTML
 
+## Taller 3: Calcular el promedio, mediana y moda 
+
+* Definir las fórmulas 
+* Implementar las fórmulas en JavaScript
+* Integrar Js en el HTML
+
 

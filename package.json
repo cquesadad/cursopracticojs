@@ -2,6 +2,6 @@
     "name": "cursopracticojs",
     "version": "1.0.1",
     "Dependencies": {
-       "bootstrap": "^4.6.1"
+       "bootstrap": "^5.2.0"
     }
   }
